@@ -7,18 +7,16 @@
 #define test_data_file_name		"new_data_test_0.01.csv"
 
 // METAPARAMETERS
-#define K		2
-
 #define N       72448
 #define TRAIN   724
 #define TEST    71724
 
-#define TYPE    4		// 1,2,3,4
+#define K		2
+#define TYPE    4
 #define CLASS   6
 
-
 // KNN FUNCTION PROTOTYPE.
-float knn (float data[TRAIN][CLASS], float data_labels[TRAIN], float query[CLASS], float dist_index[K][2]);
+float knn (float data[TRAIN][CLASS], float data_labels[TRAIN], float query[CLASS], float dist_index[TRAIN][2], int k);
 
 #endif
 

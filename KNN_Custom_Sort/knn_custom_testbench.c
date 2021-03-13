@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-#include "knn_stream.h"
+#include "knn_custom.h"
 
 int main (int argc, char* argv[])
 {

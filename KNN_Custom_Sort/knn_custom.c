@@ -1,7 +1,7 @@
 
 #include <math.h>
 #include <float.h>
-#include "knn_stream.h"
+#include "knn_custom.h"
 
 // KNN ONE AGAINST ALL FUNCTINS for 6 CLASSES of STREAM train.
 float knn (float train[TRAIN][CLASS], float train_labels[TRAIN], float test_query[CLASS], float dist_index[K][2])

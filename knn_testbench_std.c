@@ -1,10 +1,10 @@
 
 #include <stdio.h>
-#include "knn.h"
+#include "knn_std.h"
 
 int main (int argc, char* argv[])
 {
-	int i, j, k = K;
+	int i, j;
 
 	static float train[TRAIN][CLASS], train_labels[TRAIN];
 	static float test[TEST][CLASS], test_labels[TEST];
@@ -66,13 +66,13 @@ int main (int argc, char* argv[])
     int score = 0;
 
 	for (i = 0; i < TEST; i++) {
-		mode = knn(train, train_labels, test[i], dist_index, k);
+		mode = knn(train, train_labels, test[i], dist_index, K);
 
 		if (test_labels[i] == mode)
 			++score;
 	}
 
-	printf("k: %d\nscore: %d, %.1f%%\n", k, score, (float)score / TEST * 100);
+	printf("k: %d\nscore: %d, %.1f%%\n", K, score, (float)score / TEST * 100);
 
     return 0;
 }

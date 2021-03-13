@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "knn.h"
-
-// #include “ap_cint.h”
-// typedef uint<1> data_bool;
+#include "../knn_std.h"
 
 // KNN ONE AGAINST ALL FUNCTINS for 6 CLASSES of STREAM DATA.
 float knn (float train[TRAIN][CLASS], float train_labels[TRAIN], float test_query[CLASS], float dist_index[TRAIN][2], int k)
@@ -65,7 +62,7 @@ float knn (float train[TRAIN][CLASS], float train_labels[TRAIN], float test_quer
 
     // MODE.
 	for (i = 0; i < k; i++) {
-#pragma HLS LOOP_TRIPCOUNT avg=1
+#pragma HLS LOOP_TRIPCOUNT min=2 max=2
 #pragma HLS PIPELINE
 		count[(int)dist_index[i][1]]++;
 	}

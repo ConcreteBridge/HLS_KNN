@@ -1,8 +1,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#include "knn.h"
-
+#include "../knn_std.h"
 
 // KNN ONE AGAINST ALL FUNCTINS for 6 CLASSES of STREAM DATA.
 float knn (float train[TRAIN][CLASS], float train_labels[TRAIN], float test_query[CLASS], float dist_index[TRAIN][2], int k)
@@ -55,7 +54,7 @@ float knn (float train[TRAIN][CLASS], float train_labels[TRAIN], float test_quer
 
 	for (i = 0; i < CLASS; i++) {
 #pragma HLS PIPELINE
-#pragma HLS loop_tripcount min=7 max=7
+#pragma HLS loop_tripcount min=6 max=6
 		if (count[i] > count[max])
 			max = i;
 	}
