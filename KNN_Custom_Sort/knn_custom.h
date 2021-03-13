@@ -3,8 +3,8 @@
 #define KNN_H_
 
 // INPUT FILES
-#define train_data_file_name	"new_data_train_0.01.csv"
-#define test_data_file_name		"new_data_test_0.01.csv"
+#define train_data_file_name	"../Data/new_data_train_0.01.csv"
+#define test_data_file_name		"../Data/new_data_test_0.01.csv"
 
 // METAPARAMETERS
 #define N       72448
