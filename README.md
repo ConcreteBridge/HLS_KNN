@@ -1,16 +1,16 @@
 # HLS_KNN
-- Custom Solution
+Custom Solution
 [x] compiles
 [x] tested
-- Bubble Sort
+Bubble Sort
 [x] compiles
 [x] tested
-- Merge Sort
+Merge Sort
 [x] compiles
 [x] tested
-- Enumeration Sort
+Enumeration Sort
 [x] compiles
 [x] tested
-- Odd-Even Sort
+Odd-Even Sort
 [x] compiles
 [x] tested
